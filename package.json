@@ -1,0 +1,20 @@
+{
+  "name": "second-sprint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "prettier --check './**/*.{html,css,js}'",
+    "format": "prettier --write './**/*.{html,css,js}'",
+    "lint": "stylelint \"**/*.css\"",
+    "lintfix": "stylelint \"**/*.css\" --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "atomizer": "^3.30.0",
+    "prettier": "^3.8.1",
+    "stylelint": "^16.26.1"
+  }
+}
