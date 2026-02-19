@@ -9,3 +9,22 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+@keyframes heart-bit{
+    to{
+        transform:scale(1) ;
+    }
+    from{
+        transform:scale(1.25);
+    }
+}
+
+@keyframes blow{
+    to{
+        fill:transparent
+    }
+
+    from{
+        fill:red;
+    }
+}

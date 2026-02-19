@@ -21,7 +21,7 @@ h6,
 p,
 ul,
 ol,
-li {
+li{
   margin: 0;
   padding: 0;
 }
@@ -35,6 +35,7 @@ input {
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
+  all: unset;
 }
 
 ul,
@@ -51,3 +52,9 @@ ol {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+dialog {
+    position: fixed;
+    inset: 0;
+} 
+
