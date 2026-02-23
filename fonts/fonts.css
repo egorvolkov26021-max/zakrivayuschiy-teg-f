@@ -7,6 +7,9 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url(./Inter-Variable.woff2) format('woff2');
+  src:
+    local('Inter'),
+    url('../fonts/Inter-Variable.woff2') format('woff2 supports variations'),
+    url('../fonts/Inter-Variable.woff2') format('woff-variations');
   font-display: swap;
 }
