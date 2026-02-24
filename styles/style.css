@@ -25,8 +25,6 @@
 
 .header {
   inline-size: 100%;
-  display: grid;
-  justify-content: space-around;
   padding-top: 100px;
 }
 
@@ -44,10 +42,6 @@
   display: grid;
   font-family: 'PressStart2P', Arial, sans-serif;
   gap: 18px;
-}
-
-.header_title_last_word {
-  text-transform: lowercase;
 }
 
 .main-card-content {
@@ -84,7 +78,7 @@
 .main-card-text-button {
   display: grid;
   padding-inline-start: 24px;
-  padding-inline-end: 30px;
+  padding-inline-end: 25px;
   padding-block-end: 25px;
   gap: 25px;
 }
@@ -92,7 +86,7 @@
 .button-main-card {
   display: flex;
   justify-content: flex-end;
-  gap: 14px;
+  gap: 7px;
   background-color: transparent;
   position: relative;
 }
@@ -191,7 +185,7 @@
   align-self: center;
 }
 
-.image-original {
+.image-grey {
   filter: grayscale(0.8);
 }
 
@@ -248,7 +242,7 @@
 }
 
 .dialog-content {
-  display: grid;
+  display: flex;
   flex-direction: column;
   gap: 25px
 }
@@ -277,13 +271,23 @@
 .floppy-image-card-dialog {
   align-self: center;
   justify-self: flex-start;
+  flex-shrink: 0;
 }
 
-.button-main-card:focus .card__icon-button {
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  transition: outline 0.3s ease;
   outline: 2px solid var(--black-color);
 }
 
 .button__look:focus {
+  outline: none;
+}
+
+.button__look:focus-visible {
   box-shadow: 2px 2px 0px 0px var(--black-color);
 }
 
@@ -355,6 +359,10 @@
   height: 38px;
 }
 
+.dialog-window{
+  margin: auto;
+}
+
 @supports (-webkit-text-stroke: 1px black) {
   .img_watermarka::after {
     text-shadow: none;
@@ -369,7 +377,7 @@
   }
 
   .block {
-    width: 100%;
+    inline-size: 100%;
     margin-inline: auto;
   }
 
@@ -395,18 +403,27 @@
   .floppy-image-card {
     align-self: center;
   }
+
+  .dialog-window{
+    padding: 35px 35px;
+    margin: auto;
+  }
 }
 
 @media (width > 375px) {
+
+  .header{
+    display: grid;
+    justify-content: space-around;
+  }
+
   .main-end-button {
     gap: 5px;
   }
 
   .dialog-window {
     width: clamp(341px, 40vw, 353px);
-    margin: auto;
     padding: 29px 29px;
-
   }
 
   .header_title_small {
