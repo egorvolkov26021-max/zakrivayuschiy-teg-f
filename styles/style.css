@@ -10,11 +10,9 @@
 
 */
 
-
-
 .page {
   min-inline-size: 320px;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: Inter, Arial, sans-serif;
   background-image: var(--header-backgraund);
   background-size: cover;
   background-attachment: fixed;
@@ -55,8 +53,8 @@
 }
 
 .main-open-title {
-  font-family: 'Inter', Arial, sans-serif;
-  font-variation-settings: "wght" 715;
+  font-family: Inter, Arial, sans-serif;
+  font-variation-settings: 'wght' 715;
   font-size: 18px;
   letter-spacing: 0;
   padding-block: 5px;
@@ -128,7 +126,7 @@
 }
 
 .main-card-text {
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: Inter, Arial, sans-serif;
   font-variation-settings:
     'wght' 410,
     'slnt' 0;
@@ -142,7 +140,6 @@
   display: block;
   object-fit: cover;
   object-position: center;
-
 }
 
 .img_watermarka::after {
@@ -150,14 +147,13 @@
   position: absolute;
   inset-block-start: 26px;
   inset-inline-end: 26px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgb(0 0 0 / 0.5);
   font-size: 14px;
   pointer-events: none;
   text-transform: uppercase;
-  text-shadow: 1px 1px 1px rgb(255, 255, 255, 0.5);
+  text-shadow: 1px 1px 1px rgb(255 255 255 / 0.5);
   line-height: 100%;
   font-family: 'PressStart2P', Arial, sans-serif;
-  ;
   font-weight: 400;
   vertical-align: middle;
   z-index: 0;
@@ -174,7 +170,6 @@
 
 .button__text {
   font-family: 'PressStart2P', Arial, sans-serif;
-  ;
   font-weight: 400;
   font-size: 14px;
   cursor: pointer;
@@ -210,7 +205,8 @@
 }
 
 .image-all {
-  filter: grayscale(0.2) saturate(400%) hue-rotate(65deg) invert(0.1) sepia(78%) blur(1px);
+  filter: grayscale(0.2) saturate(400%) hue-rotate(65deg) invert(0.1) sepia(78%)
+    blur(1px);
 }
 
 .floppy-image-card {
@@ -244,7 +240,7 @@
 .dialog-content {
   display: flex;
   flex-direction: column;
-  gap: 25px
+  gap: 25px;
 }
 
 .dialog-window::backdrop {
@@ -259,7 +255,6 @@
 
 .dialog-text-block {
   font-family: 'PressStart2P', Arial, sans-serif;
-  width: 234px;
   font-weight: 400;
   line-height: 150%;
   font-size: 14px;
@@ -288,10 +283,8 @@
 }
 
 .button__look:focus-visible {
-  box-shadow: 2px 2px 0px 0px var(--black-color);
+  box-shadow: 2px 2px 0 0 var(--black-color);
 }
-
-
 
 .countour {
   transition: fill 0.1s linear;
@@ -359,18 +352,20 @@
   height: 38px;
 }
 
-.dialog-window{
+.dialog-window {
   margin: auto;
 }
 
 @supports (-webkit-text-stroke: 1px black) {
+
   .img_watermarka::after {
     text-shadow: none;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    -webkit-text-stroke: 1px rgb(255 255 255 / 0.5);
   }
 }
 
 @media (width <=375px) {
+
   .main-end-button {
     gap: 12px;
     flex-direction: column;
@@ -399,20 +394,21 @@
     padding-block-start: 31px;
   }
 
-
   .floppy-image-card {
     align-self: center;
   }
 
-  .dialog-window{
-    padding: 35px 35px;
-    margin: auto;
+  .dialog-window {
+    min-width: auto;
+    width: fit-content;
+    max-width: calc(100% - 32px);
+    padding: 28px 37px;
   }
 }
 
 @media (width > 375px) {
 
-  .header{
+  .header {
     display: grid;
     justify-content: space-around;
   }
@@ -423,7 +419,7 @@
 
   .dialog-window {
     width: clamp(341px, 40vw, 353px);
-    padding: 29px 29px;
+    padding: 29px;
   }
 
   .header_title_small {
